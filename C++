@@ -1,0 +1,21 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+class Point{
+private:Point (int x, int y):x(x),y>(y){}
+Point(Point &p){
+x=p.x;
+y=p.y;}
+~Point(){}
+int getX(){return x};
+int getY(){return y};
+friend float disk(Point &p1,Point &p2);
+private:
+int x,y;};
+float disk(Point &p1,Point &p2){
+float x=p1.x-p2.x;
+float y=p1.y-p2.y;
+return static_cast<float>(sqrt(x*x+y*y));}
+int main(){
+Point my1(1,1),my2(4,5);
+cout<<
